@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import Coders from "./components/Coders/Coders";
 import BankStatements from "./components/BankStatementss/BankStatements";
@@ -19,6 +19,11 @@ import DeliveryNote from "./components/Invoice/SideBar/DeliveryNote/DeliveryNote
 import SalesInvoice from "./components/Invoice/SideBar/SalesInvoice/SalesInvoice";
 import PurchaseInvoice from "./components/Invoice/SideBar/PurchaseInvoice/PurchaseInvoice";
 import CreditNote from "./components/Invoice/SideBar/CreditNote/CreditNote";
+import Payments from "./components/BankStatementss/SideBar/Payments/Payments";
+import CustomerPayment from "./components/BankStatementss/SideBar/CustomerPayment/CustomerPayment";
+import Compensations from "./components/BankStatementss/SideBar/Compensations/Compensations";
+import Advance from "./components/BankStatementss/SideBar/Advance/Advance";
+import Demands from "./components/SalesOrder/SideBar/Demands/Demands";
 
 const router = createBrowserRouter([
   {
@@ -55,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "Invoice",
-        element: <Invoice/>,
+        element: <Invoice />,
         children: [
           {
             path: "proformainvoice",
@@ -63,25 +68,43 @@ const router = createBrowserRouter([
           },
           {
             path: "deliverynote",
-            element: <DeliveryNote/>,
+            element: <DeliveryNote />,
           },
           {
             path: "salesinvoice",
-            element: <SalesInvoice/>,
+            element: <SalesInvoice />,
           },
           {
             path: "purchaseinvoice",
-            element: <PurchaseInvoice/>,
+            element: <PurchaseInvoice />,
           },
           {
-              path: "creditnote",
-              element: <CreditNote/>,
-          }
+            path: "creditnote",
+            element: <CreditNote />,
+          },
         ],
       },
       {
         path: "BankStatements",
         element: <BankStatements />,
+        children: [
+          {
+            path: "payments",
+            element: <Payments/>,
+          },
+          {
+            path: "customerpayment",
+            element: <CustomerPayment />,
+          },
+          {
+            path: "compensations",
+            element: <Compensations/>,
+          },
+          {
+            path: "advance",
+            element: <Advance />,
+          },
+        ],
       },
       {
         path: "AccountingLetters",
@@ -90,6 +113,16 @@ const router = createBrowserRouter([
       {
         path: "SalesOrder",
         element: <SalesOrder />,
+        children: [
+          {
+            path: "routes",
+            element: <Routes />,
+          },
+          {
+            path: "demands",
+            element: <Demands />,
+          }
+        ],
       },
       {
         path: "Export",

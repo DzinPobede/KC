@@ -1,0 +1,32 @@
+.left-option{
+    position: absolute;
+    top: 5vh;
+    margin: 0;
+    padding-left: 5;
+    width: 9%;
+    height: 95%;
+    background-color: #302d2e;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    user-select: none;
+}
+.left-option p{
+    padding-left: 2vh;
+    position: relative;
+    margin: 1vh;
+    text-align: left;
+    color: white;
+}
+.left-option-link{
+    top: 6vh;
+    position: relative;
+}
+.button-icon{
+    width: 3vh;
+    height: 3vh;
+    position: relative;
+    left: 0.5vh;
+    top: -43vh;
+    z-index: 2;
+}
