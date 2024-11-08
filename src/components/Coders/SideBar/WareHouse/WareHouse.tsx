@@ -1,12 +1,11 @@
-import Coders from "../../Coders"
-import "./WareHouse.css"
+import "./WareHouse.css";
 
 function WareHouse() {
-    return (
-        <>
-        <Coders/>
-        </>
-    )
+  return (
+    <div>
+      <h1 className="some">WareHouse</h1>
+    </div>
+  );
 }
 
-export default WareHouse
+export default WareHouse;

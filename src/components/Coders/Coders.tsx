@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./Coders.css";
-import { Link} from "react-router-dom";
+import { Link, Outlet, Route, Router, Routes } from "react-router-dom";
+import WareHouse from "./SideBar/WareHouse/WareHouse";
+import Partners from "./SideBar/Partners/Partners";
+import PriceList from "./SideBar/Pricelist/PriceList";
+import Articles from "./SideBar/Articles/Articles";
 
 function Coders() {
   const [isVisible, setIsVisible] = useState(true);
@@ -32,4 +36,5 @@ function Coders() {
     </>
   );
 }
+
 export default Coders;

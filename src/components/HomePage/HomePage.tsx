@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
+import Header from "../Header/Header";
 
 function HomePage() {
-  return (
+  return <Header></Header> 
+  /*(
     <>
       <div className="hotbar">
         <Link to={"/coders"}>
@@ -25,6 +27,7 @@ function HomePage() {
         </Link>
       </div>
     </>
-  );
+  );*/
+  
 }
 export default HomePage;

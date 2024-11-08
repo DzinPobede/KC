@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./Header.css";
 function Header() {
   return (
@@ -10,13 +10,13 @@ function Header() {
         <Link to={"/invoice"}>
           <p>Fakture</p>
         </Link>
-        <Link to={"/bankStatements"}>
+        <Link to={"/bankstatements"}>
           <p>Izvod</p>
         </Link>
-        <Link to={"/accountingLetters"}>
+        <Link to={"/accountingletters"}>
           <p>Knjizna pisma</p>
         </Link>
-        <Link to={"/salesOrder"}>
+        <Link to={"/salesorder"}>
           <p>Nalog prodaje</p>
         </Link>
         <Link to={"/export"}>

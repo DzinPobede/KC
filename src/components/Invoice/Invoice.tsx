@@ -27,7 +27,7 @@ function Invoice() {
             <p>Racuni (Ulazni)</p>
           </Link>
           <Link to={"creditnote"} className="left-option-link">
-            <p>Avanski racuni</p>
+            <p>Avansni racuni</p>
           </Link>
         </div>
       )}

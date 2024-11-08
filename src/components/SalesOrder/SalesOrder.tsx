@@ -16,7 +16,7 @@ function SalesOrder() {
       {isVisible && (
         <div className={"left-option"}>
           <Link to={"demands"} className="left-option-link">
-            <p>Nalog prodaje</p>
+            <p>Trebovanja</p>
           </Link>
           <Link to={"routes"} className="left-option-link">
             <p>Rute</p>

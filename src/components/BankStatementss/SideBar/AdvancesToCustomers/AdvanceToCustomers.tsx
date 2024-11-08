@@ -1,7 +1,7 @@
 import BankStatements from "../../BankStatements";
-import "./Advance.css";
+import "./AdvanceToCustomers.css";
 
-function Advance() {
+function AdvanceToCustomers() {
     return(
         <>
         <BankStatements />
@@ -9,4 +9,4 @@ function Advance() {
     )
 }
 
-export default Advance;
+export default AdvanceToCustomers;

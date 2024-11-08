@@ -22,8 +22,9 @@ import CreditNote from "./components/Invoice/SideBar/CreditNote/CreditNote";
 import Payments from "./components/BankStatementss/SideBar/Payments/Payments";
 import CustomerPayment from "./components/BankStatementss/SideBar/CustomerPayment/CustomerPayment";
 import Compensations from "./components/BankStatementss/SideBar/Compensations/Compensations";
-import Advance from "./components/BankStatementss/SideBar/Advance/Advance";
 import Demands from "./components/SalesOrder/SideBar/Demands/Demands";
+import AdvanceToCustomers from "./components/BankStatementss/SideBar/AdvancesToCustomers/AdvanceToCustomers";
+import AdvancesToSuppliers from "./components/BankStatementss/SideBar/AdvancesToSuppliers/AdvancesToSuppliers";
 
 const router = createBrowserRouter([
   {
@@ -32,12 +33,12 @@ const router = createBrowserRouter([
     errorElement: <div>Error</div>,
     children: [
       {
-        path: "HomePage",
+        path: "homepage",
         element: <HomePage />,
         children: [],
       },
       {
-        path: "Coders",
+        path: "coders",
         element: <Coders />,
         children: [
           {
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "Invoice",
+        path: "invoice",
         element: <Invoice />,
         children: [
           {
@@ -85,7 +86,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "BankStatements",
+        path: "bankstatements",
         element: <BankStatements />,
         children: [
           {
@@ -101,17 +102,21 @@ const router = createBrowserRouter([
             element: <Compensations/>,
           },
           {
-            path: "advance",
-            element: <Advance />,
+            path: "advancetocustomers",
+            element: <AdvanceToCustomers />,
           },
+          {
+            path: "advancestosuppliers",
+            element: <AdvancesToSuppliers />,
+          }
         ],
       },
       {
-        path: "AccountingLetters",
+        path: "accountingletters",
         element: <AccountingLetters />,
       },
       {
-        path: "SalesOrder",
+        path: "salesorder",
         element: <SalesOrder />,
         children: [
           {
@@ -125,7 +130,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "Export",
+        path: "export",
         element: <Export />,
       },
     ],
@@ -137,3 +142,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+
+export default router;

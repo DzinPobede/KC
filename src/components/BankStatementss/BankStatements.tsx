@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "./BankStatements.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function BankStatements() {
-    const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
   function hideClick() {
     setIsVisible(!isVisible);
   }
-    return (<>
-    <div onClick={hideClick}>
+  return (
+    <>
+      <div onClick={hideClick}>
         <img className="button-icon" src="../../public/arrow.png" alt="" />
       </div>
       {isVisible && (
@@ -22,11 +23,15 @@ function BankStatements() {
           <Link to={"payments"} className="left-option-link">
             <p>Placanja</p>
           </Link>
-          <Link to={"advance"} className="left-option-link">
-            <p>Avansni</p>
+          <Link to={"advancetocustomers"} className="left-option-link">
+            <p>Avansni (Kupaca)</p>
+          </Link>
+          <Link to={"advancestosuppliers"} className="left-option-link">
+            <p>Avansni (Dobavljacima)</p>
           </Link>
         </div>
       )}
-    </>)
+    </>
+  );
 }
-export default BankStatements
+export default BankStatements;
